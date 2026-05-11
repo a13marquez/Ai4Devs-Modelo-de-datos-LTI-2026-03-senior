@@ -83,7 +83,7 @@ CREATE TABLE "application" (
     "status" "ApplicationStatus" NOT NULL DEFAULT 'submitted',
     "notes" TEXT,
     CONSTRAINT "application_position_id_fkey" FOREIGN KEY ("position_id") REFERENCES "position"("id") ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT "application_candidate_id_fkey" FOREIGN KEY ("candidate_id") REFERENCES "candidate"("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "application_candidate_id_fkey" FOREIGN KEY ("candidate_id") REFERENCES "candidate"("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "application_position_id_candidate_id_key" UNIQUE ("position_id", "candidate_id")
 );
 
